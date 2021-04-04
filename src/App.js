@@ -1,30 +1,16 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
+import Welcome from "./Components/Welcome/index";
+
+import { Header } from "./Components/Header";
 import "./App.css";
 
 function App() {
-  const [number, setNumber] = useState(0);
-
-  const decrement = () => {
-    if (number === 0) return;
-
-    setNumber(number - 1);
-  };
-  const increment = () => {
-    setNumber(number + 1);
-  };
-
+  console.log("rerender APp component");
   return (
     <div className='App'>
-      <h2 className='display-number'> {number} </h2>
-      <div className='button-control'>
-        <button className='btn' onClick={decrement}>
-          -
-        </button>
-        <button className='btn' onClick={increment}>
-          +
-        </button>
-      </div>
+      <Header />
+      <Welcome name='Teddy' age={8} grade={2} />
     </div>
   );
 }

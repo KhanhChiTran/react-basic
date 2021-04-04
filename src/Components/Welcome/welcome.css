@@ -1,0 +1,11 @@
+.welcome {
+  color: red;
+}
+
+.btn-welcome {
+  padding: 1rem;
+  background: red;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
