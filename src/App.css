@@ -1,0 +1,20 @@
+.App {
+  background: blueviolet;
+  min-height: 100vh;
+}
+.display-number {
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  padding-top: 20vh;
+}
+.button-control {
+  /* height: 50px; */
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  margin: 20px;
+  padding: 20px;
+  font-size: 30px;
+}
