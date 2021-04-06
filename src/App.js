@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Welcome from "./Components/Welcome/index";
+import Welcome from "./Components/Welcome";
 
 import { Header } from "./Components/Header";
 import "./App.css";

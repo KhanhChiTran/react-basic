@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import userData from "../../data/user.json";
 import "./user.css";
 
+const userApi = "https://jsonplaceholder.typicode.com/users";
+
 const User = () => {
-  console.log(userData);
+  const [userData, setUserData] = useState([]);
+  useEffect(() => {
+    fetch(userApi)
+      .then((res) => res.json())
+      .then((resData) => {
+        console.log(resData);
+        setUserData(resData);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <div className='userSection'>
