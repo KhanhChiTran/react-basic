@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./welcome.css";
+import Data from "../../data/user.json";
 
 import { Header } from "../Header";
 
@@ -7,7 +8,7 @@ function Welcome(props) {
   // This is props
   const { name, age, grade } = props;
   //This is state :
-
+  console.log(Data);
   const [number, setNumber] = useState(0);
   const [toggle, setToggle] = useState(false);
 

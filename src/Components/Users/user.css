@@ -1,0 +1,16 @@
+.userSection {
+  background-color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.userWrap {
+  width: 300px;
+  padding: 20px;
+  background: white;
+  margin: 20px;
+  color: rgb(99, 97, 97);
+  line-height: 1.8rem;
+  border-radius: 5px;
+  box-shadow: 2px 4px 6px 2px #ddd;
+}
