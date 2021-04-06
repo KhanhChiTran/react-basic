@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 
-import Welcome from "./Components/Welcome";
+// import Welcome from "./Components/Welcome";
 
-import { Header } from "./Components/Header";
+// import { Header } from "./Components/Header";
 import "./App.css";
-
-import Clothes from "./Components/Clothes";
-import User from "./Components/Users";
+import UserInput from "./Components/UserInput";
+import UserOutput from "./Components/UserOutput";
+// import Clothes from "./Components/Clothes";
+// import User from "./Components/Users";
 
 function App() {
-  console.log("rerender APp component");
+  const [userName, setUserName] = useState("User");
+  const inputHandler = (e) => {
+    setUserName(e.target.value);
+  };
+
   return (
     <div className='App'>
       {/* <Header />
@@ -17,7 +22,9 @@ function App() {
       <Clothes name='Jacket' type='cotton' size='XL' color='Blue'>
         Item 1
       </Clothes>{" "} */}
-      <User />
+      {/* <User /> */}
+      <UserInput click={inputHandler} />
+      <UserOutput name={userName} />
     </div>
   );
 }

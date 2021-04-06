@@ -1,0 +1,110 @@
+[
+  {
+    "size": "S",
+    "width": "30",
+    "height": "30",
+    "radius": "0",
+    "image": "forest.jpeg",
+    "type": "Square",
+    "boxHeight": "120"
+  },
+  {
+    "size": "S",
+    "width": "30",
+    "height": "30",
+    "radius": "8px",
+    "image": "forest.jpeg",
+    "type": "Rounded",
+    "boxHeight": "120"
+  },
+  {
+    "size": "S",
+    "width": "30",
+    "height": "30",
+    "radius": "50%",
+    "image": "forest.jpeg",
+    "type": "Circle",
+    "boxHeight": "120"
+  },
+  {
+    "size": "M",
+    "width": "60",
+    "height": "60",
+    "radius": "0",
+    "image": "forest.jpeg",
+    "type": "Square",
+    "boxHeight": "150"
+  },
+  {
+    "size": "M",
+    "width": "60",
+    "height": "60",
+    "radius": "8px",
+    "image": "forest.jpeg",
+    "type": "Rounded",
+    "boxHeight": "150"
+  },
+  {
+    "size": "M",
+    "width": "60",
+    "height": "60",
+    "radius": "50%",
+    "image": "forest.jpeg",
+    "type": "Circle",
+    "boxHeight": "150"
+  },
+  {
+    "size": "L",
+    "width": "120",
+    "height": "120",
+    "radius": "0",
+    "image": "forest.jpeg",
+    "type": "Square",
+    "boxHeight": "210"
+  },
+  {
+    "size": "L",
+    "width": "120",
+    "height": "120",
+    "radius": "8px",
+    "image": "forest.jpeg",
+    "type": "Rounded",
+    "boxHeight": "210"
+  },
+  {
+    "size": "L",
+    "width": "120",
+    "height": "120",
+    "radius": "50%",
+    "image": "forest.jpeg",
+    "type": "Circle",
+    "boxHeight": "210"
+  },
+  {
+    "size": "XL",
+    "width": "200",
+    "height": "200",
+    "radius": "0",
+    "image": "forest.jpeg",
+    "type": "Square",
+    "boxHeight": "290"
+  },
+  {
+    "size": "XL",
+    "width": "200",
+    "height": "200",
+    "radius": "8px",
+    "image": "forest.jpeg",
+    "type": "Rounded",
+    "boxHeight": "290"
+  },
+  {
+    "size": "XL",
+    "width": "200",
+    "height": "200",
+    "radius": "50%",
+    "image": "forest.jpeg",
+    "type": "Circle",
+    "boxHeight": "290"
+  }
+]

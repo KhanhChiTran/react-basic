@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import userData from "../../data/user.json";
-import "./user.css";
+import "./user.scss";
 
 const userApi = "https://jsonplaceholder.typicode.com/users";
 
