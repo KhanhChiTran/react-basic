@@ -1,32 +1,32 @@
-import React, { useState } from "react";
-
-// import Welcome from "./Components/Welcome";
-
-// import { Header } from "./Components/Header";
+import React, { Component } from "react";
+// import logo from "./logo.svg";
 import "./App.css";
-import UserInput from "./Components/UserInput";
-import UserOutput from "./Components/UserOutput";
-// import Clothes from "./Components/Clothes";
-// import User from "./Components/Users";
+// import { data } from "./../src/data/data";
+// import Person from "./Person/Person";
+import TodoItem from "./Components/Todos/TodoItem";
+// import TrafficLight from "./Components/TrafficLight/trafficlight";
 
-function App() {
-  const [userName, setUserName] = useState("User");
-  const inputHandler = (e) => {
-    setUserName(e.target.value);
-  };
+class App extends Component {
+  constructor() {
+    super();
+    this.todoItems = [
+      {
+        title: "reading",
+      },
+    ];
+  }
 
-  return (
-    <div className='App'>
-      {/* <Header />
-      <Welcome name='Teddy' age={8} grade={2} />
-      <Clothes name='Jacket' type='cotton' size='XL' color='Blue'>
-        Item 1
-      </Clothes>{" "} */}
-      {/* <User /> */}
-      <UserInput click={inputHandler} />
-      <UserOutput name={userName} />
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        <h1>Hi React</h1>
+        {this.todoItems.length > 0 &&
+          this.todoItems.map((item, index) => (
+            <TodoItem key={index} item={item.title} />
+          ))}
+        {this.todoItems.length === 0 && <p>Nothing to do...</p>}
+        {/* <TrafficLight /> */}
+      </div>
+    );
+  }
 }
-
-export default App;
