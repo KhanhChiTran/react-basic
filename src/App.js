@@ -6,7 +6,7 @@ import "./App.css";
 // import UserOutput from "./Components/UserOutput";
 // import Clothes from "./Components/Clothes";
 // import User from "./Components/Users";
-import Validation from "./Components/ValidationComponent/valid";
+import Validation from "./Components/ValidationComponent/";
 
 function App() {
   // const [userName, setUserName] = useState("User");
@@ -24,7 +24,8 @@ function App() {
       {/* <User /> */}
       {/* <UserInput click={inputHandler} /> */}
       {/* <UserOutput name={userName} /> */}
-      <Validation textLength='3' maxLength='10' minLength='5' />
+      <Validation />
     </div>
   );
 }
+export default App;

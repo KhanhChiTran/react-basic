@@ -3,7 +3,6 @@ class Validation extends Component {
   constructor(props) {
     super(props);
 
-    console.log(this.props);
     this.state = {
       value: "",
       length: 0,
@@ -27,7 +26,7 @@ class Validation extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input
+        {/* <input
           type='text'
           onChange={this.getTextInput}
           value={this.state.value}
@@ -35,7 +34,7 @@ class Validation extends Component {
         <p>{this.state.length}</p>
         <p>{this.state.notice}</p>
 
-        <button type='submit'>Submit</button>
+        <button type='submit'>Submit</button> */}
       </form>
     );
   }
