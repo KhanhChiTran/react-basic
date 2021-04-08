@@ -4,16 +4,17 @@ import React, { useState } from "react";
 
 // import { Header } from "./Components/Header";
 import "./App.css";
-import UserInput from "./Components/UserInput";
-import UserOutput from "./Components/UserOutput";
+// import UserInput from "./Components/UserInput";
+// import UserOutput from "./Components/UserOutput";
 // import Clothes from "./Components/Clothes";
 // import User from "./Components/Users";
+import Validation from "./Components/ValidationComponent/valid";
 
 function App() {
-  const [userName, setUserName] = useState("User");
-  const inputHandler = (e) => {
-    setUserName(e.target.value);
-  };
+  // const [userName, setUserName] = useState("User");
+  // const inputHandler = (inputName) => {
+  //   setUserName(inputName);
+  // };
 
   return (
     <div className='App'>
@@ -23,8 +24,9 @@ function App() {
         Item 1
       </Clothes>{" "} */}
       {/* <User /> */}
-      <UserInput click={inputHandler} />
-      <UserOutput name={userName} />
+      {/* <UserInput click={inputHandler} /> */}
+      {/* <UserOutput name={userName} /> */}
+      <Validation textLength='3' maxLength='10' minLength='5' />
     </div>
   );
 }
