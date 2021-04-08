@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-
-// import Welcome from "./Components/Welcome";
-
-// import { Header } from "./Components/Header";
+import React, { Component } from "react";
+// import logo from "./logo.svg";
 import "./App.css";
+
 // import UserInput from "./Components/UserInput";
 // import UserOutput from "./Components/UserOutput";
 // import Clothes from "./Components/Clothes";
@@ -30,5 +28,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
