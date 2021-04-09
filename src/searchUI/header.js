@@ -5,6 +5,10 @@ class Header extends Component {
     return (
       <div className='su-header'>
         <h1>UserSearch</h1>
+        <div className='su-header__nav'>
+          <span>Search</span>
+          <span>About</span>
+        </div>
       </div>
     );
   }

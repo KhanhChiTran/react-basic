@@ -5,6 +5,7 @@ import Header from "./header";
 
 import SearchResult from "./searchResult";
 
+const currentPage = "about";
 class searchUI extends Component {
   state = {
     searchTerm: "",
@@ -20,17 +21,26 @@ class searchUI extends Component {
     return (
       <div className='searchUI'>
         <Header />
-        <div className='su-searchInput'>
-          <input
-            value={this.state.searchTerm}
-            type='text'
-            onChange={(event) =>
-              this.setState({ searchTerm: event.target.value })
-            }
-          />
-          <button onClick={this.handleSearch}>Search</button>
-        </div>
-        <SearchResult searchFor={this.state.lastSearchTerm} />
+        {currentPage === "search" ? (
+          <div className='su-searchInput'>
+            <input
+              value={this.state.searchTerm}
+              type='text'
+              onChange={(event) =>
+                this.setState({ searchTerm: event.target.value })
+              }
+            />
+            <button onClick={this.handleSearch}>Search</button>
+            <SearchResult searchFor={this.state.lastSearchTerm} />
+          </div>
+        ) : (
+          <div className='about'>
+            <span>
+              This little web-app was done by me.Feel free to send me an email
+              hello@google.com
+            </span>
+          </div>
+        )}
       </div>
     );
   }
