@@ -8,6 +8,8 @@ import "./App.css";
 // import User from "./Components/Users";
 import Validation from "./Components/ValidationComponent/";
 
+import SearchUI from "./searchUI";
+
 function App() {
   // const [userName, setUserName] = useState("User");
   // const inputHandler = (inputName) => {
@@ -24,7 +26,8 @@ function App() {
       {/* <User /> */}
       {/* <UserInput click={inputHandler} /> */}
       {/* <UserOutput name={userName} /> */}
-      <Validation />
+      {/* <Validation /> */}
+      <SearchUI />
     </div>
   );
 }

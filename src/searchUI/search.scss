@@ -1,0 +1,28 @@
+.searchUI {
+  width: 100%;
+  background-color: cadetblue;
+  min-height: 100vh;
+  .su-header {
+    height: 120px;
+    width: 100%;
+    border: 1px solid black;
+    h1 {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      padding-right: 20px;
+    }
+  }
+  .su-searchInput {
+    input {
+      height: 30px;
+      padding: 10px;
+      margin: 10px;
+      font-size: 20px;
+    }
+    button {
+      padding: 5px 10px;
+    }
+  }
+}
