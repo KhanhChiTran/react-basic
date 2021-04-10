@@ -19,3 +19,7 @@
   padding: 20px;
   font-size: 30px;
 }
+.active {
+  text-decoration: line-through;
+  opacity: 0.2;
+}

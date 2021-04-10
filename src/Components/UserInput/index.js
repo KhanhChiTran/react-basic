@@ -10,10 +10,10 @@ const UserInput = (props) => {
   return (
     <div>
       <input
-        type='text'
+        type="text"
         onChange={props.click}
         style={style}
-        placeholder='Your Name'
+        placeholder="Your Name"
       />
     </div>
   );

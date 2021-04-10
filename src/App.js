@@ -9,24 +9,16 @@ import TodoItem from "./Components/Todos/TodoItem";
 class App extends Component {
   constructor() {
     super();
-    this.todoItems = [
-      {
-        title: "reading",
-      },
-    ];
   }
 
   render() {
     return (
       <div className="App">
-        <h1>Hi React</h1>
-        {this.todoItems.length > 0 &&
-          this.todoItems.map((item, index) => (
-            <TodoItem key={index} item={item.title} />
-          ))}
-        {this.todoItems.length === 0 && <p>Nothing to do...</p>}
+        <h1>ToDo List</h1>
+        <TodoItem todoItems={this.todoItems} />
         {/* <TrafficLight /> */}
       </div>
     );
   }
 }
+export default App;
