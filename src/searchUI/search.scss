@@ -1,0 +1,51 @@
+.searchUI {
+  width: 100%;
+  background-color: cadetblue;
+  min-height: 100vh;
+  .su-header {
+    position: relative;
+    height: 120px;
+    width: 100%;
+    border: 1px solid black;
+    h1 {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      padding-right: 20px;
+    }
+    &__nav {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: 1rem;
+      span {
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 0.5rem;
+        font-size: 18px;
+        color: white;
+        text-transform: uppercase;
+        line-height: 1;
+      }
+      span:first-child {
+        border-right: 2px solid white;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+  .su-searchInput {
+    input {
+      height: 30px;
+      padding: 10px;
+      margin: 10px;
+      font-size: 20px;
+    }
+    button {
+      padding: 5px 10px;
+    }
+  }
+  .about {
+    padding: 10%;
+  }
+}

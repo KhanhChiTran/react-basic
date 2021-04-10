@@ -1,24 +1,36 @@
 import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
-// import { data } from "./../src/data/data";
-// import Person from "./Person/Person";
-import TodoItem from "./Components/Todos/TodoItem";
-// import TrafficLight from "./Components/TrafficLight/trafficlight";
 
-class App extends Component {
-  constructor() {
-    super();
-  }
+import Todo from "./Components/Todos/TodoItem";
+// import UserInput from "./Components/UserInput";
+// import UserOutput from "./Components/UserOutput";
+// import Clothes from "./Components/Clothes";
+// import User from "./Components/Users";
+import Validation from "./Components/ValidationComponent/";
 
-  render() {
-    return (
-      <div className="App">
-        <h1>ToDo List</h1>
-        <TodoItem todoItems={this.todoItems} />
-        {/* <TrafficLight /> */}
-      </div>
-    );
-  }
+import SearchUI from "./searchUI";
+
+function App() {
+  // const [userName, setUserName] = useState("User");
+  // const inputHandler = (inputName) => {
+  //   setUserName(inputName);
+  // };
+
+  return (
+    <div className="App">
+      {/* <Header />
+      <Welcome name='Teddy' age={8} grade={2} />
+      <Clothes name='Jacket' type='cotton' size='XL' color='Blue'>
+        Item 1
+      </Clothes>{" "} */}
+      {/* <User /> */}
+      {/* <UserInput click={inputHandler} /> */}
+      {/* <UserOutput name={userName} /> */}
+      {/* <Validation /> */}
+      {/* <SearchUI /> */}
+      <Todo />
+    </div>
+  );
 }
 export default App;

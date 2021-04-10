@@ -1,7 +1,7 @@
 .App {
   min-height: 100vh;
   width: 60%;
-  margin: 20vh auto;
+  margin: 0 auto;
 }
 .display-number {
   font-size: 60px;
