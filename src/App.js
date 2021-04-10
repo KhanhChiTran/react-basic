@@ -2,15 +2,14 @@ import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
 
-import Todo from "./Components/Todos/TodoItem";
+// import Todo from "./Components/Todos/TodoItem";
 // import UserInput from "./Components/UserInput";
 // import UserOutput from "./Components/UserOutput";
 // import Clothes from "./Components/Clothes";
 // import User from "./Components/Users";
-import Validation from "./Components/ValidationComponent/";
-
-import SearchUI from "./searchUI";
-
+// import Validation from "./Components/ValidationComponent/";
+// import SearchUI from "./Components/searchUI";
+import Quiz from "./Components/Quiz/quiz";
 function App() {
   // const [userName, setUserName] = useState("User");
   // const inputHandler = (inputName) => {
@@ -18,7 +17,10 @@ function App() {
   // };
 
   return (
-    <div className="App">
+    <div className='App'>
+      <header>
+        <h1>Quiz App</h1>
+      </header>
       {/* <Header />
       <Welcome name='Teddy' age={8} grade={2} />
       <Clothes name='Jacket' type='cotton' size='XL' color='Blue'>
@@ -29,7 +31,8 @@ function App() {
       {/* <UserOutput name={userName} /> */}
       {/* <Validation /> */}
       {/* <SearchUI /> */}
-      <Todo />
+      {/* <Todo /> */}
+      <Quiz />
     </div>
   );
 }

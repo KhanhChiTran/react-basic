@@ -1,0 +1,51 @@
+.quiz-card {
+  color: rgb(28, 46, 46);
+  background-color: pink;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 2px #ccc;
+  .question {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .answers span {
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    display: block;
+    background-color: #fff;
+    margin: 5px 0;
+  }
+  span.correct {
+    background: rgb(0, 255, 64);
+    color: #fff;
+  }
+  span.incorrect {
+    background: red;
+    color: black;
+  }
+
+  span:hover {
+    transform: scale(1.02);
+  }
+}
+.cta-btn {
+  text-align: center;
+  margin-top: 30px;
+  .btn {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 4px 2px #ccc;
+  }
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  .submit {
+    background: rgb(120, 231, 98);
+  }
+  .next {
+    background: rgb(240, 72, 72);
+  }
+}

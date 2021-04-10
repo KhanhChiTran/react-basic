@@ -5,7 +5,7 @@ import Header from "./header";
 
 import SearchResult from "./searchResult";
 
-const currentPage = "about";
+const currentPage = "search";
 class searchUI extends Component {
   state = {
     searchTerm: "",
