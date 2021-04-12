@@ -33,11 +33,13 @@
   text-align: center;
   margin-top: 30px;
   .btn {
-    padding: 10px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
     font-size: 16px;
     border: none;
     outline: none;
     box-shadow: 2px 2px 4px 2px #ccc;
+    cursor: pointer;
   }
   .btn:hover {
     transform: scale(1.05);
@@ -47,5 +49,36 @@
   }
   .next {
     background: rgb(240, 72, 72);
+  }
+}
+
+.btn-wrap{
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+.category-btn{
+  padding: 10px 20px;
+  color: whitesmoke;
+  background-color: orange;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px 2px #ccc;
+  font-size: larger;
+}
+.category-btn:hover{
+  background-color: #fff;
+  color: orange;
+}
+.type{
+  text-align: center;
+  .type-btn{
+    padding: 10px 20px;
+    color: black;
+    background-color: rgb(47, 245, 47);
+    border: none;
+    border-radius: 3px;
+    box-shadow: 2px 2px 4px 2px #ccc;
+    margin: 20px 10px;
   }
 }

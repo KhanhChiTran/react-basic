@@ -10,6 +10,8 @@ import "./App.css";
 // import Validation from "./Components/ValidationComponent/";
 // import SearchUI from "./Components/searchUI";
 import Quiz from "./Components/Quiz/quiz";
+
+console.log((0 && 2) || (9 && 3))
 function App() {
   // const [userName, setUserName] = useState("User");
   // const inputHandler = (inputName) => {

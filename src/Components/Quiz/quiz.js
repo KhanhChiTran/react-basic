@@ -4,21 +4,21 @@ import "./style.scss";
 class Quiz extends Component {
   constructor() {
     super();
-    this.category = data.map((item) => item.category);
+    this.data = data
     this.state = {
-      category: "",
+      category: [],
+      choosed : false,
       count: 0,
       reset: null,
       isAnswered: false,
     };
-    console.log(data);
   }
-  itemClickedHandler = (value) => {
-    console.log(value);
+
+  categoryHandler = ()=>{
     this.setState({
-      category: this.category.filter((item) => item.category === value),
-    });
-  };
+      choosed : !this.state.choosed
+    })
+  }
   handleAnswer = (answer, correct_answer, event) => {
     this.setState({
       isAnswered: true,
@@ -28,72 +28,38 @@ class Quiz extends Component {
       this.setState({ reset: event });
     }
   };
+  checkItem = (number,length)=>{
+    if(number > length){
+      return 0
+    }else{
+      return number + 1
+    }
+      }
   render() {
     const { correct_answer, incorrect_answers, question } = data[
       this.state.count
     ];
     const answers = [...incorrect_answers, correct_answer].sort();
+    const categories = data.map(item=>item.category)
+    const newCategories = new Set(categories)
+    const difficulty = data.map(item=>item.difficulty)
+    const newDifficulty = new Set(difficulty)
+    console.log(newDifficulty)
     return (
       <div>
-        <div>
-          <h3>Category: </h3>
-
-          <label
-            onClick={() => this.itemClickedHandler(this.state.category)}
-            htmlFor='music'
-          >
-            Music{" "}
-            <input
-              value='Entertainment: Music'
-              type='radio'
-              name='music'
-              id='music'
-            />
-          </label>
-
-          <label htmlFor='film'>
-            Film{" "}
-            <input
-              value='Entertainment: Film'
-              type='radio'
-              name='film'
-              id='film'
-            />
-          </label>
-          <label htmlFor='history'>
-            History
-            <input value='History' type='radio' name='history' id='history' />
-          </label>
-
-          <label htmlFor='game'>
-            Video Games{" "}
-            <input
-              value='Entertainment: Video Games'
-              type='radio'
-              name='game'
-              id='game'
-            />
-          </label>
+        <div className='btn-wrap'>   
+       {[...newCategories].map(category =>
+        <button className = 'category-btn'
+       key = {category.id}
+            onClick={this.categoryHandler}
+            
+          >{category}
+          </button>)}
         </div>
-        <div>
-          <h3>Difficulty: </h3>
-          <select name='' id=''>
-            <option value='easy'>Easy</option>
-            <option value='medium'>Medium</option>
-            <option value='hard'>Hard</option>
-          </select>
+        <div className='type'>
+          {this.state.choosed && [...newDifficulty].map(type=>
+         <button className ='type-btn'>{type}</button>)}
         </div>
-        {/* {data.map((item, index) => (
-          <div key={index} className='question'>
-            <h3>{item.question}</h3>
-            <div className='answer'>
-              <button>{item.correct_answer}</button>
-              {item.incorrect_answers.map((a) => (
-                <button>{a}</button>
-              ))}
-            </div>
-          </div>
-        ))} */}
         <div className='quiz-card'>
           <div className='question'>
             {" "}
@@ -121,15 +87,16 @@ class Quiz extends Component {
           </div>
         </div>
         <div className='cta-btn'>
-          {/* <button className='btn submit'>Submit</button> */}
           <button
             onClick={() => {
               console.log(this.state.reset);
               if (this.state.reset) {
                 this.state.reset.target.classList.toggle("incorrect");
               }
+
+              
               this.setState({
-                count: this.state.count + 1,
+                count: this.checkItem(this.state.count,answers.length),
                 isAnswered: false,
                 reset: null,
               });

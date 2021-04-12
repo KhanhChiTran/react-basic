@@ -1,6 +1,6 @@
 [
   {
-    "category": "Entertainment: Video Games",
+    "category": "Video Games",
     "type": "multiple",
     "difficulty": "medium",
     "question": "Who was the first jedi that Starkiller had to kill in Star Wars: The Force Unleashed?",
@@ -8,7 +8,7 @@
     "incorrect_answers": ["Ahsoka Tano", "Kazdan Paratus", "Kento Marek"]
   },
   {
-    "category": "Entertainment: Video Games",
+    "category": "Video Games",
     "type": "multiple",
     "difficulty": "easy",
     "question": "What is the main ship used by Commander Shepard in the Mass Effect Franchise called?",
@@ -28,7 +28,7 @@
     ]
   },
   {
-    "category": "Entertainment: Film",
+    "category": "Film",
     "type": "multiple",
     "difficulty": "medium",
     "question": "Which one of these action movies are shot entirely in one take?",
@@ -40,7 +40,7 @@
     ]
   },
   {
-    "category": "Entertainment: Video Games",
+    "category": "Video Games",
     "type": "boolean",
     "difficulty": "easy",
     "question": "Rebecca Chambers does not appear in any Resident Evil except for the original Resident Evil and the Gamecube remake.",
@@ -48,7 +48,7 @@
     "incorrect_answers": ["True"]
   },
   {
-    "category": "Entertainment: Music",
+    "category": "Music",
     "type": "multiple",
     "difficulty": "medium",
     "question": "Who is the frontman of Muse?",
@@ -56,7 +56,7 @@
     "incorrect_answers": ["Dominic Howard", "Thom Yorke", "Jonny Greenwood"]
   },
   {
-    "category": "Entertainment: Video Games",
+    "category": "Video Games",
     "type": "multiple",
     "difficulty": "medium",
     "question": "What is the name of Cream the Rabbit&#039;s mom in the &quot;Sonic the Hedgehog&quot; series?",
@@ -64,7 +64,7 @@
     "incorrect_answers": ["Peach", "Strawberry", "Mint"]
   },
   {
-    "category": "Entertainment: Video Games",
+    "category": "Video Games",
     "type": "multiple",
     "difficulty": "easy",
     "question": "Who created the &quot;Metal Gear&quot; Series?",
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "category": "Entertainment: Video Games",
+    "category": "Video Games",
     "type": "multiple",
     "difficulty": "hard",
     "question": "Which drive form was added into Kingdom Hearts II Final Mix?",
@@ -84,7 +84,15 @@
     "incorrect_answers": ["Valor Form", "Wisdom Form", "Anti Form"]
   },
   {
-    "category": "Entertainment: Video Games",
+    "category": "Video Games",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What was the name of the canceled projected by Blizzard Entertainment that would be later become Overwatch?",
+    "correct_answer": "Titan",
+    "incorrect_answers": ["Omnic", "Omega", "Ghost"]
+  },
+  {
+    "category": "Art",
     "type": "multiple",
     "difficulty": "easy",
     "question": "What was the name of the canceled projected by Blizzard Entertainment that would be later become Overwatch?",
