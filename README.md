@@ -3,4 +3,4 @@
 `Recap very basic React`
 
 
-# DO i need a extenal SSD ?
+# Do i need an external SSD ?
