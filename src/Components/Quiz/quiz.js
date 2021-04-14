@@ -4,21 +4,21 @@ import "./style.scss";
 class Quiz extends Component {
   constructor() {
     super();
-    this.data = data
+    this.data = data;
     this.state = {
       category: [],
-      choosed : false,
+      // choosed: false,
       count: 0,
       reset: null,
       isAnswered: false,
     };
   }
 
-  categoryHandler = ()=>{
+  categoryHandler = () => {
     this.setState({
-      choosed : !this.state.choosed
-    })
-  }
+      // choosed: true,
+    });
+  };
   handleAnswer = (answer, correct_answer, event) => {
     this.setState({
       isAnswered: true,
@@ -28,44 +28,47 @@ class Quiz extends Component {
       this.setState({ reset: event });
     }
   };
-  checkItem = (number,length)=>{
-    if(number > length){
-      return 0
-    }else{
-      return number + 1
+  checkItem = (number, length) => {
+    if (number > length) {
+      return 0;
+    } else {
+      return number + 1;
     }
-      }
+  };
   render() {
     const { correct_answer, incorrect_answers, question } = data[
       this.state.count
     ];
     const answers = [...incorrect_answers, correct_answer].sort();
-    const categories = data.map(item=>item.category)
-    const newCategories = new Set(categories)
-    const difficulty = data.map(item=>item.difficulty)
-    const newDifficulty = new Set(difficulty)
-    console.log(newDifficulty)
+    const categories = data.map((item) => item.category);
+    const newCategories = new Set(categories);
+    const difficulty = data.map((item) => item.difficulty);
+    const newDifficulty = new Set(difficulty);
+    console.log(newDifficulty);
     return (
       <div>
-        <div className='btn-wrap'>   
-       {[...newCategories].map(category =>
-        <button className = 'category-btn'
-       key = {category.id}
-            onClick={this.categoryHandler}
-            
-          >{category}
-          </button>)}
+        <div className="btn-wrap">
+          {[...newCategories].map((category) => (
+            <button
+              className="category-btn"
+              key={category.id}
+              onClick={this.categoryHandler}
+            >
+              {category}
+            </button>
+          ))}
         </div>
-        <div className='type'>
-          {this.state.choosed && [...newDifficulty].map(type=>
-         <button className ='type-btn'>{type}</button>)}
+        <div className="type">
+          {[...newDifficulty].map((type) => (
+            <button className="type-btn">{type}</button>
+          ))}
         </div>
-        <div className='quiz-card'>
-          <div className='question'>
+        <div className="quiz-card">
+          <div className="question">
             {" "}
             <h3>{question}</h3>
           </div>
-          <div className='answers'>
+          <div className="answers">
             {answers.map((answer) => (
               <span
                 className={`${
@@ -86,7 +89,7 @@ class Quiz extends Component {
             ))}
           </div>
         </div>
-        <div className='cta-btn'>
+        <div className="cta-btn">
           <button
             onClick={() => {
               console.log(this.state.reset);
@@ -94,14 +97,13 @@ class Quiz extends Component {
                 this.state.reset.target.classList.toggle("incorrect");
               }
 
-              
               this.setState({
-                count: this.checkItem(this.state.count,answers.length),
+                count: this.checkItem(this.state.count, answers.length),
                 isAnswered: false,
                 reset: null,
               });
             }}
-            className='btn next'
+            className="btn next"
           >
             Next
           </button>
