@@ -4,14 +4,10 @@ import "./style.css";
 class LuckyNumbers extends Component {
   state = {
     arrNumbers: [],
-    spin: "",
     specialNumber: null,
+    clicked: false,
   };
   showHandler = () => {
-    this.setState({
-      spin: false,
-    });
-
     let newArr = [];
     let randomNum = () => Math.ceil(Math.random() * 49);
     while (newArr.length < 6) {
@@ -20,19 +16,16 @@ class LuckyNumbers extends Component {
         newArr.push(number);
       }
     }
-
     this.setState({
-      spin: `spin ${Math.random() / 100 + 1}s`,
       arrNumbers: [...newArr],
       specialNumber: Math.floor(Math.random() * 10),
+      clicked: true,
     });
-    setTimeout(() => {
-      this.setState({ spin: "" });
-    }, 1100);
   };
   resetHandler = () => {
     this.setState({
       arrNumbers: [],
+      clicked: false,
     });
   };
 
@@ -42,31 +35,14 @@ class LuckyNumbers extends Component {
         {this.state.arrNumbers.length > 0 && (
           <div className="wrap">
             {this.state.arrNumbers.map((num, i) => (
-              <span
-                style={{
-                  animation: this.state.spin,
-                }}
-                key={i}
-              >
-                {num}
-              </span>
+              <span key={i}>{num}</span>
             ))}
-            <span
-              style={{
-                animation: this.state.spin,
-              }}
-              className="special-num"
-            >
-              {this.state.specialNumber}
-            </span>
+            <span className="special-num">{this.state.specialNumber}</span>
           </div>
         )}
         <div className="btn-wrap">
           <button onClick={this.resetHandler}>Reset</button>
-          <button
-            onClick={this.showHandler}
-            disabled={this.state.spin.length !== 0}
-          >
+          <button onClick={this.showHandler} disabled={this.state.clicked}>
             Show me lucky numbers
           </button>
         </div>
