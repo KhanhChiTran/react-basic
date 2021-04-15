@@ -1,0 +1,57 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+span {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 100px 100px,
+    #fcff5c,
+    rgb(216, 213, 24)
+  );
+  color: red;
+  font-size: larger;
+  /* animation: spin 1s; */
+}
+span.spin {
+  /* animation: spin 0.8s; */
+}
+.special-num {
+  color: yellow;
+  background: radial-gradient(circle at 100px 100px, #fcff5c, rgb(212, 24, 11));
+}
+.btn-wrap {
+  text-align: center;
+  margin-top: 30px;
+}
+button {
+  padding: 10px 20px;
+  border: thistle;
+  border-radius: 5px;
+  background: rgb(20, 228, 114);
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+}
+button:disabled {
+  background-color: #cecece;
+  cursor: wait;
+}
+@keyframes spin {
+  0% {
+    opacity: 0.2;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
