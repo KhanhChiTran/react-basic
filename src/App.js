@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
-
+import titleHeader from "./hello.module.css";
 // import Todo from "./Components/Todos/TodoItem";
 // import UserInput from "./Components/UserInput";
 // import UserOutput from "./Components/UserOutput";
@@ -11,7 +11,7 @@ import "./App.css";
 // import SearchUI from "./Components/searchUI";
 import Quiz from "./Components/Quiz/quiz";
 
-console.log((0 && 2) || (9 && 3))
+console.log((0 && 2) || (9 && 3));
 function App() {
   // const [userName, setUserName] = useState("User");
   // const inputHandler = (inputName) => {
@@ -19,7 +19,7 @@ function App() {
   // };
 
   return (
-    <div className='App'>
+    <div className="App">
       <header>
         <h1>Quiz App</h1>
       </header>
@@ -35,6 +35,7 @@ function App() {
       {/* <SearchUI /> */}
       {/* <Todo /> */}
       <Quiz />
+      <h2 className={titleHeader.title}>This is module css</h2>
     </div>
   );
 }
